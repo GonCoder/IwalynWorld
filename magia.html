@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/archivo.css">
+    <style>
+        @font-face {
+            font-family: "BlackCastleMF";
+            src: url(fonts/BlackCastleMF.ttf);
+        }
+
+        @font-face {
+            font-family: "Stabillo Medium";
+            src: url(fonts/Stabillo\ Medium.ttf);
+        }
+
+        @font-face {
+            font-family: "Death Record";
+            src: url(fonts/Death\ Record.ttf);
+        }
+
+        @font-face {
+            font-family: "Dungeon";
+            src: url(fonts/DUNGRG__.TTF);
+        }
+
+        @font-face {
+            font-family: "Scurlock";
+            src: url(fonts/SC______.TTF);
+        }
+
+        body {
+            cursor: url('cursores/BnW/Arrow.cur'), auto;
+        }
+
+        a {
+            cursor: url('cursores/BnW/NO.cur'), pointer;
+        }
+
+        .dropdown-menu {
+            cursor: url('cursores/BnW/UpArrow.cur'), pointer !important;
+        }
+
+        .nav-link {
+            cursor: url('cursores/BnW/UpArrow.cur'), pointer !important;
+        }
+
+        p,
+        span {
+            cursor: url('cursores/BnW/Pen.cur'), text;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="nav-item dropdown fixed-top nav-custom">
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="img/menu-icon.png" alt="">
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#protas">Protagonistas</a></li>
+            <li><a class="dropdown-item" href="#villanos">Villanos</a></li>
+            <li>
+                <hr class="dropdown-divider"> <span style="font-size: 1.5rem;">-♦Secundarios</span>
+            </li>
+            <li><a class="dropdown-item" href="#humanos">Humanos</a></li>
+            <li><a class="dropdown-item" href="#orcos">Orcos</a></li>
+            <li><a class="dropdown-item" href="#enanos">Enanos</a></li>
+            <li><a class="dropdown-item" href="#elfos">Elfos</a></li>
+            <li><a class="dropdown-item" href="#trolls">Trolls</a></li>
+            <li><a class="dropdown-item" href="#fenrines">Fenrines</a></li>
+            <li><a class="dropdown-item" href="#pandines">Pandines</a></li>
+            <li><a class="dropdown-item" href="#cernines">Cernines</a></li>
+            <li><a class="dropdown-item" href="#kattines">Kattines</a></li>
+            <li><a class="dropdown-item" href="#lipunk">Lipunk</a></li>
+            <li><a class="dropdown-item" href="#sauroks">Sauroks</a></li>
+            <li><a class="dropdown-item" href="#sirenios">Sirenios</a></li>
+            <li><a class="dropdown-item" href="#selkies">Selkies</a></li>
+            <li><a class="dropdown-item" href="#nagas">Nagas</a></li>
+            <li><a class="dropdown-item" href="#fungant">Fungant</a></li>
+            <li><a class="dropdown-item" href="#insectianos">Sectines</a></li>
+            <li><a class="dropdown-item" href="#nekines">Nekines</a></li>
+            <li><a class="dropdown-item" href="#arpias">Arpías</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div class="overlay">
+        <a href="home.html">
+            <h1 id="up">Magia</h1>
+        </a>
+        <a href="home.html"><img class="mainIcon" src="img/webIcon.png" alt=""></a>
+        <h2 id="gen">General</h2>
+        <div class="FlexPadre">
+            <p>En general hay 3 tipos de talentos innatos. Cada talento se especializa en un tipo de magia, digamos que
+                es como la genética de nuestros músculos.
+                Hay gente que tiene mejores piernas y otros con mejores brazos, hay gente que sirve para muchos deportes
+                y gente que no sirve para ninguno.
+                Con la magia pasa lo mismo, cada tipo se especializa en un área mágica. <br> <br>Digamos que la magia
+                tiene una fuerza o poder. Tiene la capacidad de crearse y aparecer o existir. Por último tendrá que ver
+                con
+                los elementos o no. Es decir, si se aleja de la naturaleza al ser algo arcano o abstracto, o tiene que
+                ver
+                directamente con las fuerzas naturales. <br> <br> En general la magia comprende 3 abstracciones de la
+                realidad y todo el mundo
+                usa y ejerce todas las capacidades y su tipo solo indica cual es su punto fuerte:
+                <br> - El tipo Vi'kara
+                son individuos que se especializan en potenciar y proyectar su magia, cuando consiguen crear algo,
+                pueden modificarlo hasta el punto de hacerlo muy poderoso y destructivo,
+                o con mucha potencia. <br>
+                - El tipo Shokator se especializa en crear cosas, invocan a su antojo y más
+                si se aleja de lo natural. <br>
+                - El tipo Shizura es relativamente especial, ya que es una mezcla de los otros 2 tipos, pero solo
+                resplandece cuando tiene que ver con la naturaleza.
+                Su magia natural es la mejor, pero en todo lo demás que tenga que ver con cosas ajenas a ella,
+                flaquearán. <br> <br>
+                Obviamente cabe mencionar que hay gente muy minoritaria que son especiales y tendrán capacidades super
+                extrañas, que no encajan en ningún tipo y no siguen estas normas. <br> <br>
+                En general la magia usa la fuerza física del mago, es decir, un mago va a cansarse cuando conjura, es
+                como si estuviera haciendo deporte. Quizá invocar una espada es como correr durante 1 hora.
+                Aunque hay magias especiales que usan ciertos elementos, lo que consumirá energía concreta del elemento.
+                Los magos pueden acumular ciertas energías y la usarán mezclando su fuerza vital con las energías para
+                equilibrar el consumo. También puede transformar la de su alrededor directamente para consumirla en el
+                acto del conjuro, esto se conoce como "magia directa". Además las energías se pueden transformar a
+                energía vital en un proceso bastante lento.
+            </p>
+
+            <h2 id="tipos">Tipos de Mago</h2>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/magia/potencia.png" alt="">
+                <p> <span class="fw-bolder h3-simulator">Vi'kara</span>
+                    <br>
+                    Este tipo tiene dificultades para aprender diversas magias, se suelen especializar en unos pocos
+                    hechizos o en "hacer una cosa". Son lentos a la hora de conjurar
+                    y suelen usar catalizadores que les ayude a conjurar más deprisa. A la hora de que el conjuro ya
+                    está vigente y sea creado, suelen tener una potencia abrumadora y son
+                    muy fuertes. Potencialmente pueden incluso cargar y aumentar más aún el poder. Son los mejores
+                    conteniendo, cargando y proyectando. <br>
+                    Por ejemplo, podrían crear un objeto (si no es natural les resultará más fácil) por ejemplo una bola
+                    arcana. Tardarán más que un Shokator en crearla, pero una vez creada, puede lanzarla con mucha
+                    fuerza, a mucha velocidad y su poder explosivo puede ser altamente
+                    destructivo. Podría mantenerla en su control, y durante su control podría potenciarla
+                    y aumentar todas las características mencionadas. Además la carga de características es
+                    relativamente rápida, es decir, pueden cargar muy rápido hasta su tope, y su tope suele ser muy alto
+                    también
+                    en comparación a los otros tipos. <br>
+                    Suelen ser muy buenos levitadores y telequinéticos. Aún que solo con una o pocas cosas. Son buenos
+                    acumulando energía, y más lentos transformando la del ambiente para magia directa o para energía
+                    vital (pero cuando tienen mucho tiempo, si tienen mucha energía acumulada, pueden llegar a
+                    regenerarse heridas graves).
+                    <br>
+                </p>
+                <p class="titulo-avatar-absoluto">Potencia<br></p>
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/magia/invocador.png" alt="">
+                <p> <span class="fw-bolder h3-simulator">Shokator</span>
+                    <br>
+                    Este tipo es muy versátil ya que pueden aprender a hacer de todo, crean y materializan a su antojo.
+                    Se suelen especializar en el control y la transformación de las cosas. Flaquean en la materia
+                    natural
+                    pero en todo lo demás pueden llegar incluso a tocar lo abstracto. <br> Son extremadamente rápidos
+                    conjurando, aunque sus efectos suelen ser débiles y tardan bastante en cargar
+                    la magia. Tampoco tienen un tope alto al que llegar, así que normalmente no se molestan en
+                    concentrarse. Les gusta usar catalizadores que potencien su magia por razones obvias. Pueden llegar
+                    a crear ilusiones, levitar
+                    varias o muchas cosas a velocidades lentas y con poca fuerza o influenciar mentes de diversas formas
+                    (teniendo en cuenta que lo más tocho sería el control mental).<br> Como no son buenos proyectando,
+                    no tienen mucho rango
+                    y la influencia de su control no puede alejarse demasiado de ellos, cuanto más lejos, más débil será
+                    el control. Pero pueden ser bastante compentetes con la magia directa o transformándola para energía
+                    vital (lo que hace que se regeneren más rápido que otros magos, pero no llegan a curarse heridas
+                    graves). Son muy buenos "encantadores"
+                    y "hechiceros" <br>
+                    <br> Pueden invocar "seres" que realmente no están vivos. Están vinculados a la voluntad del mago, y
+                    éste los controla y los mueve por impulso. Inconscientemente
+                    como si fuera una de sus extremidades. El control se ve afectado por las características
+                    mencionadas, por lo que ni serán poderosos, ni se podrán alejar en exceso del mago. Si el vínculo se
+                    rompe o no se concentra en mantenerlo, la invocación desaparece.
+                    Éste tipo de invocación vinculada a la voluntad no puede materializarse como tal. A diferencia de
+                    otras creaciones que no requieren del vínculo y una vez creadas
+                    persisten en el mundo.
+
+
+                    <br>
+                </p>
+                <p class="titulo-avatar-absoluto">Invocador<br></p>
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/magia/naturaleza.png" alt="">
+                <p> <span class="fw-bolder h3-simulator">Shizura</span>
+                    <br>
+                    Dentro de lo especial, no lo es tanto. Ya que engloba todo lo natural. Digamos que son una mezcla
+                    del Vi'kara y Shokator, pero enfocados solo a la materia y elementos de Iwalyn.<br> Es decir, pueden
+                    crear elementos y con mucho poder. Pero
+                    para las cosas abstractas o que no tengan que ver con la naturaleza, tendrán grandes dificultades
+                    para aprender y desarrollar esa magia.
+                    Por ejemplo, podrían controlar los elementos a su antojo y crearlos, podrían crear una gran bola de
+                    fuego y cargarla para que fuera muy destructiva.
+                    A rasgos generales no tienen tanta potencia como un Vi'kara, ni pueden tener un control exagerado de
+                    varias fuentes como los Shokator.
+                    Pero en un término medio, son extremadamente competentes con los elementos naturales.
+
+
+                    <br>
+                </p>
+                <p class="titulo-avatar-absoluto">Naturaleza<br></p>
+
+            </div>
+
+            <h2 id="elemen">Elementos Especiales</h2>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/magia/luz.png" alt="">
+                <p> <span class="fw-bolder h3-simulator">Magia de luz</span>
+                    <br>
+                    Energía del mismísimo Esol, la magia en estado puro. Esta energía se puede transformar cómodamente a
+                    lo arcano. Los sacerdotes se especializan en refinar
+                    la energía y conjurar cosas de luz que se asocian a la positividad del equilibrio. Es muy variado y
+                    da muchas posibilidades. Esta energía principalmente se usa
+                    solo para este tipo de magia. Pero como todas las energías se pueden transformar en energía vital, y
+                    al ser la magia básica, se asimila mejor que otras energías.
+                    Es la mejor energía que se puede transformar a fuerza vital y es compatible con todos los seres de
+                    Iwalyn. <br> <br>
+                    Obviamente solo se recoge de día, y la hora punta es el medio día, cuando más fuerte pega. <br>
+                    Esol emana su energía por instinto para bañar el planea y que los habitantes le defiendan.
+
+
+                    <br>
+                </p>
+                <p class="titulo-avatar-absoluto">Luz<br>de <br>Esol <br></p>
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/magia/luna.png" alt="">
+                <p> <span class="fw-bolder h3-simulator">Magia de la "Luna"</span>
+                    <br>
+                    Energía del mismísimo Esol, reflejada en Geutsuna.
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a
+
+
+
+                    <br>
+                </p>
+                <p class="titulo-avatar-absoluto">Luz<br>de <br>Geutsuna <br></p>
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/magia/spiritmancia.png" alt="">
+                <p> <span class="fw-bolder h3-simulator">Magia del Alma</span>
+                    <br>
+                    Usa energía las almas. Partiendo de que el spiritmancer puede usar su propia alma de energía
+                    además de la fuerza vital.
+                    Pueden controlar y doblejar almas ajenas. (Estoy barajando si al hacerte spiritmancer, te conviertes
+                    o tu tipo desaparece. Te vuelves un tipo especial o sin tipo.)
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a
+
+
+
+                    <br>
+                </p>
+                <p class="titulo-avatar-absoluto">Spiritmancia<br></p>
+
+            </div>
+
+            <h2 id="elemen">Personajes relevantes</h2>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/magia/presencia.png" alt="">
+                <p> <span class="fw-bolder h3-simulator">Magia de presencia</span>
+                    <br>
+                    La Spiritmancer humana, Zarana, se dió cuenta de que el poder mágico transformaba las cosas en
+                    general, era el estilo de magia que siempre se había promovido entre los Shokators.
+                    Siguiendo esta lógica, se le ocurrió transformar la propia abstracción de la presencia. Dando así
+                    paso a una de las magias más básicas y la más importante de la segunda
+                    época. Al poder moldear la presencia del individuo, podía expandir la suya propia, haciendo que
+                    cuando colisionara con la de otros seres vivos, hacer que la de ellos se expandiera
+                    a su vez, haciendo un sistema de detección en cadena que le permitía al mago sentir la ubicación de
+                    estos a distancia. Con este concepto luego se exploraría la manera de volverse invisible al usarla
+                    de forma contraria, disminuyendo la presencia.
+                    <br>
+                </p>
+                <p class="titulo-avatar-absoluto">Zarana<br><span class="fw-bolder h3-simulator">Época 2</span></p>
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/magia/VikaraMago.png" alt="">
+                <p> <span class="fw-bolder h3-simulator">Primer Mago Vi'kara</span>
+                    <br>
+                    <br>
+                    <br>
+                    Merudin fue el primero que se dió cuenta de que existía este tipo de magos. Con la ayuda de Thyleris
+                    y como primer maestro de los primeros magos humanos,
+                    llegaron a la conclusión de que había diferentes tipos.
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a<br>
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a<br>
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a
+                    <br>
+                </p>
+                <p class="titulo-avatar-absoluto">Humano<br>Merudin <br><span class="fw-bolder h3-simulator">Época
+                        1</span></p>
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/magia/shokatormago.png" alt="">
+                <p> <span class="fw-bolder h3-simulator">Primer Mago Shokator</span>
+                    <br>
+                    <br>
+                    <br>
+                    Gashdalf descubrió este tipo por accidente.
+                    <br>
+                    Hasta su descubrimiento se pensaba que solo estaban el tipo Vi'kara y el Shizura aparte de que se barajaba que hubiera "algo más" respecto a la spiritmancia.
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a<br>
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a<br>
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    a
+                    <br>
+                    <br>
+                    a
+                    <br>
+                </p>
+                <p class="titulo-avatar-absoluto">Elfo<br>Gashdalf <br><span class="fw-bolder h3-simulator">Época
+                        1</span></p>
+
+            </div>
+
+
+
+
+        </div>
+        <img src="img/webBG.png" alt="" class="bg">
+        <div class="boton-para-subir"><a href="#up"><img src="img/arrow2.png" alt="" class="flecha"></a></div>
+        <div class="boton-para-home"><a href="home.html"><img src="img/webIcon.png" alt="" class="mainIcon"></a></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+
+
+
+            </script>
+</body>
+
+</html>

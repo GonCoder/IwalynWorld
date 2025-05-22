@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geografía</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/archivo.css">
+    <style>
+        @font-face {
+            font-family: "BlackCastleMF";
+            src: url(fonts/BlackCastleMF.ttf);
+        }
+
+        @font-face {
+            font-family: "Stabillo Medium";
+            src: url(fonts/Stabillo\ Medium.ttf);
+        }
+
+        @font-face {
+            font-family: "Death Record";
+            src: url(fonts/Death\ Record.ttf);
+        }
+
+        @font-face {
+            font-family: "Dungeon";
+            src: url(fonts/DUNGRG__.TTF);
+        }
+
+        @font-face {
+            font-family: "Scurlock";
+            src: url(fonts/SC______.TTF);
+        }
+
+        body {
+            cursor: url('cursores/BnW/Arrow.cur'), auto;
+        }
+
+        a {
+            cursor: url('cursores/BnW/NO.cur'), pointer;
+        }
+
+        .dropdown-menu {
+            cursor: url('cursores/BnW/UpArrow.cur'), pointer !important;
+        }
+
+        .nav-link {
+            cursor: url('cursores/BnW/UpArrow.cur'), pointer !important;
+        }
+
+        p,
+        span {
+            cursor: url('cursores/BnW/Pen.cur'), text;
+        }
+
+        /* Zonas invisibles por defecto */
+        .map-overlay {
+            background-color: rgba(0, 0, 0, 0);
+            /* Invisibles inicialmente */
+            /* border-radius: 70% 15%; Si las zonas son circulares */
+            transition: background-color 0.3s ease;
+            cursor: url('cursores/BnW/NO.cur'), pointer;
+        }
+
+        /* Efecto de iluminación cuando se pasa el ratón */
+        .map-overlay:hover {
+            background-color: rgba(124, 115, 255, 0.404);
+            /* Color de iluminación */
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="nav-item dropdown fixed-top nav-custom">
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="img/menu-icon.png" alt="">
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="razas.html">Razas</a></li>
+            <li><a class="dropdown-item" href="Cultura.html">Cultura</a></li>
+            <li><a class="dropdown-item" href="#lugares">Lugares</a></li>
+            <li><a class="dropdown-item" href="#deathdoor">Puerta de la Muerte</a></li>
+            <li>
+                <hr class="dropdown-divider"> <span style="font-size: 1.5rem;">-♦Regiones</span>
+            </li>
+            <li><a class="dropdown-item" href="#turez-tera">Humanos</a></li>
+            <li><a class="dropdown-item" href="#orcos">Orcos</a></li>
+            <li><a class="dropdown-item" href="#enanos">Enanos</a></li>
+            <li><a class="dropdown-item" href="#elfos">Elfos</a></li>
+            <li><a class="dropdown-item" href="#trolls">Trolls</a></li>
+            <li><a class="dropdown-item" href="#fenrines">Fenrines</a></li>
+            <li><a class="dropdown-item" href="#pandines">Pandines</a></li>
+            <li><a class="dropdown-item" href="#cernines">Cernines</a></li>
+            <li><a class="dropdown-item" href="#kattines">Kattines</a></li>
+            <li><a class="dropdown-item" href="#lipunk">Lipunk</a></li>
+            <li><a class="dropdown-item" href="#sauroks">Sauroks</a></li>
+            <li><a class="dropdown-item" href="#sirenios">Sirenios</a></li>
+            <li><a class="dropdown-item" href="#selkies">Selkies</a></li>
+            <li><a class="dropdown-item" href="#nagas">Nagas</a></li>
+            <li><a class="dropdown-item" href="#fungant">Fungant</a></li>
+            <li><a class="dropdown-item" href="#insectianos">Sectines</a></li>
+            <li><a class="dropdown-item" href="#nekines">Nekines</a></li>
+            <li><a class="dropdown-item" href="#arpias">Arpías</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div class="overlay">
+        <a href="home.html">
+            <h1 id="up">Geografía</h1>
+        </a>
+        <a href="home.html"><img class="mainIcon" src="img/webIcon.png" alt=""></a>
+        <h2 id="mapas">Mapas</h2>
+        <div class="FlexPadre" style="flex-direction: row;">
+            <div style="position: relative;">
+                <img src="img/mapas/Iwalyn.png"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+                <!-- Zonas clicables e iluminables -->
+                <div class="map-overlay" id="turez-tera-area"
+                    style="position: absolute; top: 40px; left: 98px; width: 620px; height: 230px; border-radius: 120px 100px 200px 80px;">
+                </div>
+                <div class="map-overlay" id="zunkow-area"
+                    style="position: absolute; bottom: 46px; right: 59px; width: 90px; height: 90px; border-radius: 70% 15%;">
+                </div>
+                <div class="map-overlay" id="nozmag-area"
+                    style="position: absolute; bottom: 100px; left: 25px; width: 195px; height: 235px; border-radius: 50% 50% 100% 50%;">
+                </div>
+                <div class="map-overlay" id="islas-magicas-area"
+                    style="position: absolute; bottom: 150px; left: 320px; width: 140px; height: 150px; border-radius: 50% 50% 100% 50%;">
+                </div>
+                <div class="map-overlay" id="undorjuz-area"
+                    style="position: absolute; bottom: 125px; right: 240px; width: 150px; height: 230px; border-radius: 50% 90% 50% 50%;">
+                </div>
+                <div class="map-overlay" id="zerimo-area"
+                    style="position: absolute; bottom: 180px; right: 40px; width: 150px; height: 230px; border-radius: 50% 90% 50% 50%;">
+                </div>
+            </div> <!-- aquí cierra el div del mapa general -->
+            <!-- aaaaaa -->
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <h2 id="turez-tera">Turez Tera</h2>
+            </div>
+            <div>
+                <img src="img/mapas/turez-tera.webp"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+            </div>
+            <p>Descripción <br>BLABLALBABLA</p>
+            <!-- aaaaaa -->
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <h2 id="nozmag">Nozmag</h2>
+            </div>
+            <div>
+                <img src="img/mapas/NozmagHD.webp"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+
+            </div>
+            <p>Descripción <br>BLABLALBABLA</p>
+            <!-- aaaaaa -->
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <h2 id="undorjuz">Undor'juz</h2>
+            </div>
+            <div>
+                <img src="img/mapas/undorjuz.webp"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+
+            </div>
+            <p>Descripción <br>BLABLALBABLA</p>
+            <!-- aaaaaa -->
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <h2 id="islas-magicas">Islas Mágicas</h2>
+            </div>
+            <div>
+                <img src="img/mapas/magic-islands.webp"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+
+            </div>
+            <p>Descripción <br>BLABLALBABLA</p>
+            <!-- aaaaaa -->
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <h2 id="Zunkow">Zunkow</h2>
+            </div>
+            <div>
+                <img src="img/mapas/Zunkow.webp"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px; width: 1200px;">
+
+            </div>
+            <p>Descripción <br>BLABLALBABLA</p>
+            <!-- aaaaaa -->
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <h2 id="zerimo">Zerimo</h2>
+            </div>
+            <div>
+                <img src="img/mapas/ZerimoHD.webp"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+
+            </div>
+            <p>Descripción <br>BLABLALBABLA</p>
+            <!-- Abajo empiezas las zonas generales -->
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <h1 id="lugares">Lugares Importantes</h1>
+            </div>
+            <h2>Bosque Niebla</h2>
+            <div>
+                <img src="img/mapas/bosque-niebla.jfif"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+
+            </div>
+            <p><span class="h3-simulator">Descripcion</span> <br>Los bichos son 10 veces más grande de lo normal y hay
+                bichos prehistóricos.</p>
+            <!-- eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+            <h2>Ciudad Sumergida</h2>
+            <div>
+                <img src="img/mapas/Ciudad-sumergida.jfif"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+
+            </div>
+            <p><span class="h3-simulator">Descripcion</span> <br>De las sirenas, a la que se llega cogiendo las monturas
+                submarinas o con burbujas mágicas (como si fueran ascensores) que aguantan la presión ya que la ciudad
+                se encuentra a 20 mil metros de profundidad. Hay paradas con hoteles, restaurantes y tiendas submarinas
+                cada 1000m, es decir, un total de 20 paradas preparadas y anti-presión, si alguien sale de las burbujas
+                durante el camino o en alguna parada puede morir devorado, ahogado o aplastado por la presión. El viaje
+                es largo y se tarda aproximadamente 36h en llegar a la ciudad. Cuanto más se baje, más frío hace.</p>
+            <!-- eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+            <h2>Bosque Muerto</h2>
+            <div>
+                <img src="img/mapas/bosque-muerto.jfif"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+
+            </div>
+            <p><span class="h3-simulator">Descripcion</span> <br>Nadie se atreve a ir. Tiene en su interior una ciénaga
+                bastante profunda donde perece quien intente atravesarla. Este es el lugar donde habitan los seres
+                llamados fantasmas, entre otros seres vivos(?).</p>
+            <!-- eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+            <h2>Ciudad Steampunk en las montañas</h2>
+            <div>
+                <img src="img/mapas/steampunk-city-mountain.jfif"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+
+            </div>
+            <p><span class="h3-simulator">Descripcion</span> <br>La ciudad de los mejores ingenieros, inventores y
+                mecánicos de todas las razas. Se accede a ella a través de un ascensor situado a los pies de la montaña.
+                El ascensor es grande y permite la entrada a monturas/mascotas; además de que corre el aire (no es
+                hermético ni está cerrado completamente). Hay uno de bajada y uno de subida.</p>
+            <!-- eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+            <h2 style="width: 100%;">Lago Rojo</h2>
+            <div>
+                <img src="img/mapas/lago-rojo.jfif"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+
+            </div>
+            <p><span class="h3-simulator">Descripcion</span> <br>Casi ningún organismo sobrevive en este lago de
+                carbonato de sodio.</p>
+            <!-- eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+            <h2 style="width: 100%;">Ciudad Profunda del Cañón</h2>
+            <div>
+                <img src="img/mapas/ciudad-profunda.jfif"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+
+            </div>
+            <p><span class="h3-simulator">Descripcion</span> <br>Se extiende por todo el interior del cañón (que es
+                enorme y profundo). Las casas están literalmente colgando del acantilado y al fondo de este se encuentra
+                un enorme lago.</p>
+            <!-- eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+            <h2 style="width: 100%;">Estanque Arcoíris</h2>
+            <div>
+                <img src="img/mapas/estanque-arcoiris.jfif"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+
+            </div>
+            <p><span class="h3-simulator">Descripcion</span> <br>Pendiente</p>
+            <!-- eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+            <h2 id="deathdoor" style="width: 100%;">Puerta de la Muerte</h2>
+            <div>
+                <img src="img/mapas/entrada-de-la-muerte.jfif"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+
+            </div>
+            <p><span class="h3-simulator">Descripcion</span> <br>Una vez mueres vas allí directamente, está gobernado
+                por la muerte que tiene una guadaña. Hay una espada mágica que mata todo el mal del mundo. Esta espada
+                se transforma al tamaño del portador; si es un gigante la espada será gigantesca, si es un enano, la
+                espada será enana… Solo hay una manera de volver de allí que es atravesando la puerta que conecta el
+                mundo de los vivos con el de los muertos (si la encuentras desde el otro lado), en el lado de los vivos
+                se encuentra en lo más profundo del océano protegida por un enorme y gigantesco kraken, en una cueva
+                oxigenada con una entrada por un túnel acuático. En el caso de que un fantasma cruce la puerta hacia el
+                mundo de los vivos tiene 7 días para encontrar y volver a su cuerpo o su alma estará condenada a estar
+                eternamente por el mundo de los vivos. La única manera de ir al mundo de los muertos es morir. La
+                espada, en un principio es gigante, y se encuentra en la entrada, pero en la parte del mundo de los
+                vivos. En la cueva.</p>
+            <!-- eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+            <h2 style="width: 100%;">Ciudad Nenúfar</h2>
+            <div>
+                <img src="img/mapas/Ciudad_Nenufar5.webp"
+                    style="border-radius: 150px; border: 8px solid rgb(0, 83, 131); box-shadow: darkturquoise 0px 0px 24px;">
+
+            </div>
+            <p><span class="h3-simulator">Descripcion</span> <br>Los nenúfares son tan grandes que existe una
+                ciudad sobre ellos y puedes caminar tranquilamente encima de sus hojas. La "ciudad sobre las aguas" la
+                llaman algunos.</p>
+
+
+
+
+        </div>
+        <img src="img/webBG.png" alt="" class="bg">
+        <div class="boton-para-subir"><a href="#up"><img src="img/arrow2.png" alt="" class="flecha"></a></div>
+        <div class="boton-para-home"><a href="home.html"><img src="img/webIcon.png" alt="" class="mainIcon"></a></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+            </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Seleccionamos las zonas visibles, hay que poner una const para cada zona.
+                const zunkowZone = document.getElementById("zunkow-area");
+                const turezTeraZone = document.getElementById("turez-tera-area");
+                const nozmagZone = document.getElementById("nozmag-area");
+                const islasMagicasZone = document.getElementById("islas-magicas-area");
+                const UndorjuzZone = document.getElementById("undorjuz-area");
+                const zerimoZone = document.getElementById("zerimo-area");
+                // Añadimos eventos de clic para redirigir, hay que hacer una función para cada zona.
+                zunkowZone.addEventListener("click", function () {
+                    window.location.href = "#Zunkow"; // Redirige a Zunkow
+                });
+                turezTeraZone.addEventListener("click", function () {
+                    window.location.href = "#turez-tera"; // Redirige a Zunkow
+                });
+                nozmagZone.addEventListener("click", function () {
+                    window.location.href = "#nozmag"; // Redirige a Zunkow
+                });
+                islasMagicasZone.addEventListener("click", function () {
+                    window.location.href = "#islas-magicas"; // Redirige a Zunkow
+                });
+                UndorjuzZone.addEventListener("click", function () {
+                    window.location.href = "#undorjuz"; // Redirige a Zunkow
+                });
+                zerimoZone.addEventListener("click", function () {
+                    window.location.href = "#zerimo"; // Redirige a Zunkow
+                });
+
+            });
+
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/archivo.css">
+    <style>
+        @font-face {
+            font-family: "BlackCastleMF";
+            src: url(fonts/BlackCastleMF.ttf);
+        }
+
+        @font-face {
+            font-family: "Stabillo Medium";
+            src: url(fonts/Stabillo\ Medium.ttf);
+        }
+
+        @font-face {
+            font-family: "Death Record";
+            src: url(fonts/Death\ Record.ttf);
+        }
+
+        @font-face {
+            font-family: "Dungeon";
+            src: url(fonts/DUNGRG__.TTF);
+        }
+
+        @font-face {
+            font-family: "Scurlock";
+            src: url(fonts/SC______.TTF);
+        }
+
+        body {
+            cursor: url('cursores/BnW/Arrow.cur'), auto;
+        }
+
+        a {
+            cursor: url('cursores/BnW/NO.cur'), pointer;
+        }
+
+        .dropdown-menu {
+            cursor: url('cursores/BnW/UpArrow.cur'), pointer !important;
+        }
+
+        .nav-link {
+            cursor: url('cursores/BnW/UpArrow.cur'), pointer !important;
+        }
+
+        p,
+        span {
+            cursor: url('cursores/BnW/Pen.cur'), text;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="nav-item dropdown fixed-top nav-custom">
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="img/menu-icon.png" alt="">
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#fisicas">Físicas</a></li>
+            <li><a class="dropdown-item" href="#magicas">Mágicas</a></li>
+            <li><a class="dropdown-item" href="#mixtas">Mixtas</a></li>
+            <li><a class="dropdown-item" href="#spiritmancer">Spiritmancer</a></li>
+            <li>
+                <hr class="dropdown-divider"> <span style="font-size: 1.5rem;">-♦Clases</span>
+            </li>
+            <li><a class="dropdown-item" href="#guerrero">Guerrero</a></li>
+            <li><a class="dropdown-item" href="#arquero">Arquero</a></li>
+            <li><a class="dropdown-item" href="#berserker">Berserker</a></li>
+            <li><a class="dropdown-item" href="#cazarrecompensas">Cazarrecompensas</a></li>
+            <li><a class="dropdown-item" href="#asesino">Asesino</a></li>
+            <li><a class="dropdown-item" href="#alquimista">Alquimista</a></li>
+            <li><a class="dropdown-item" href="#cazador">Cazador</a></li>
+            <li><a class="dropdown-item" href="#mago">Mago</a></li>
+            <li><a class="dropdown-item" href="#sacerdote">Sacerdote</a></li>
+            <li><a class="dropdown-item" href="#chaman">Chaman</a></li>
+            <li><a class="dropdown-item" href="#druida">Druida</a></li>
+            <li><a class="dropdown-item" href="#brujo">Brujo</a></li>
+            <li><a class="dropdown-item" href="#paladin">Paladin</a></li>
+            <li><a class="dropdown-item" href="#samurai">Samurai</a></li>
+            <li><a class="dropdown-item" href="#ninja">Ninja</a></li>
+            <li><a class="dropdown-item" href="#ronin">Ronin</a></li>
+           
+        </ul>
+    </nav>
+
+
+
+    <div class="overlay">
+        <a href="home.html">
+            <h1 id="up">Clases</h1>
+        </a>
+        <a href="home.html"><img class="mainIcon" src="img/webIcon.png" alt=""></a>
+        <div class="FlexPadre">
+            <p>• Existen rituales especiales para encasillar a las personas en una clase, desbloqueando así todo el
+                potencial. Normalmente se hace cuando el sujeto llega a ser mayor de edad (a tener en cuenta que cada
+                raza difiere en ese dato). Los que lo tienen claro pueden ir entrenando y aprendiendo teoría poco a
+                poco, pero al ser tan duro normalmente no se comienza el entrenamiento de clase hasta que el sujeto ha
+                crecido lo suficiente y esté cerca de la promoción, pues es demasiado duro para los niños.</p>
+
+            <h2 id="fisicas">Físicas</h2>
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/clases/guerrero.png" alt="">
+                <p> <span id="guerrero" class="fw-bolder h3-simulator">Guerrero</span>
+                    <br>
+                    Usuarios de armamento pesado con espada y escudo, especializado en artes de combate cuerpo a cuerpo
+                    defensivo. Son buenos inspirando a sus aliados en combate ya que son una fuerte clase de avanzada.
+                    <br>
+                </p>
+
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/clases/ranger.png" alt="">
+                <p> <span id="arquero" class="fw-bolder h3-simulator">Arquero</span>
+                    <br>
+                    Arqueros precisos, especializados en el cuidado y entendimiento de la naturaleza y su conservación,
+                    suelen llevar pets de combate, en el combate cuerpo a cuerpo atacan con dagas. Tienen habilidades de
+                    tirador (como disparar varias flechas a la vez, que persiguen, con efecto). <br>
+                    • Los ranger nagas: llevan mascotas, su arma es una especie de caña de pescar (un palo atado a media
+                    lanza) y van siempre con una pet (swooping evil).
+
+                    <br>
+                </p>
+
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/clases/berserk.png" alt="">
+                <p> <span id="berserker" class="fw-bolder h3-simulator">Berserker</span>
+                    <br>
+                    Guerreros brutales especializados en acumular heridas para plasmar toda esa rabia y dolor en la
+                    batalla. Se especializan en hachas o en hachas de dos manos. Se especializan en artes de combate
+                    cuerpo a cuerpo ofensivas. Sus gritos pueden inspirar a los aliados (algunos dirían que incluso son
+                    mágicos).
+
+                    <br>
+                </p>
+
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/clases/caza-recompensas.png" alt="">
+                <p> <span id="cazarrecompensas" class="fw-bolder h3-simulator">Cazarrecompensas</span>
+                    <br>
+                    Luchadores con armaduras ligeras extremadamente ágiles capaces de correr por las paredes, saltar muy
+                    alto y van armados con una katana en una mano y en la otra una escopeta de vapor a presión. <br> Van
+                    con sombrero. <br>Pueden lanzar granadas de vapor o usar artilugios steampunk.
+                    <br>
+                </p>
+
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/clases/asesino.png" alt="">
+                <p> <span id="asesino" class="fw-bolder h3-simulator">Asesino</span>
+                    <br>
+                    Armados con dagas, especialistas en asesinato a sangre fría, evitan el combate directo, aunque
+                    también son bastante infalibles, especialistas en el arte del ataque a puntos críticos. Sus ataques
+                    son precisos y pueden hacerse invisibles. <br> Pueden usar bombas y trampas.
+                    <br>
+                </p>
+
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img style="border-radius: 50%;" class="avatar" src="img/clases/alquimista.jfif" alt="">
+                <p> <span id="alquimista" class="fw-bolder h3-simulator">Alquimista</span>
+                    <br>
+                    conocedores de pócimas y ungüentos del mundo conocido las cuales tienen una gran diversidad de
+                    funciones. <br> Van armados con lanzas ligeras y suelen ir sin armadura. <br> Son combatientes
+                    ligeros.
+                </p>
+
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/clases/cazador.png" alt="">
+                <p> <span id="cazador" class="fw-bolder h3-simulator">Cazador</span>
+                    <br>
+                    Especialistas en la matanza y/o captura de grandes monstruos, conocedores de la fauna y flora
+                    extrema. <br> Guerreros de constitución fuerte. <br> Van armados con espadones (grandes mandobles) o
+                    grandes
+                    espadones, o balista. <br>
+                    Son cercanos a la alquimia, ya que saben combinar hierbas para hacer unguentos o fabrican trampas y
+                    somníferos para las capturas.
+
+                    <br>
+                </p>
+                <p class="titulo-avatar-absoluto"><br> <img class="avatar" src="img/clases/monster-slayer.png" alt="">
+                </p>
+
+
+            </div>
+
+
+            <h2 id="magicas">Mágicas</h2>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/clases/mago.png" alt="">
+                <p> <span id="mago" class="fw-bolder h3-simulator">Mago</span>
+                    <br>
+                    • Los magos no usan varitas para hacer magia, hacen magia con las manos, aunque pueden usar
+                    diferentes catalizadores para potenciar su magia. <br>
+                    Pueden aprender de todo, y se diferencian por <a href="magia.html" target="_blank">tipos de
+                        mago</a>.
+
+                    <br>
+                </p>
+
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img style="border-radius: 50%;" class="avatar" src="img/clases/sacer.jfif" alt="">
+                <p> <span id="sacerdote" class="fw-bolder h3-simulator">Sacerdote</span>
+                    <br>
+                    Especialistas en magia curativa, conocen artes para combatir la corrupción (venenos, etc.), usan
+                    magia de la vida, son más poderosos contra los no muertos; y magia defensiva. Usan mazas y libros de
+                    conjuros.
+                </p>
+
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img style="border-radius: 50%;" class="avatar" src="img/clases/chaman.jfif" alt="">
+                <p> <span id="chaman" class="fw-bolder h3-simulator">Chaman</span>
+                    <br>
+                    Se especializan en curación mágica espiritual muy difícil de controlar y obtener. Hacen invocaciones
+                    de elementales y dominan los elementos (si hay algo ardiendo puede controlar las llamas). Es la
+                    clase más cercana a la spiritmancia, se podría decir que es la base en pañales de la spiritmancia.
+                    Sus armas son báculos, bastones o cayados.
+                </p>
+
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img style="border-radius: 50%;" class="avatar" src="img/clases/druida.jfif" alt="">
+                <p> <span id="druida" class="fw-bolder h3-simulator">Druida</span>
+                    <br>
+                    Controlan la naturaleza, se pueden transformar en animales. Se especializan en magia geomántica.
+                    También usan bastones, báculos o cayados.
+                </p>
+
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img style="border-radius: 50%;" class="avatar" src="img/clases/brujo.jfif" alt="">
+                <p> <span id="brujo" class="fw-bolder h3-simulator">Brujo</span>
+                    <br>
+                    Diferencia entre Mago/a y Brujo/a: Los magos practican la magia elemental y todo aquello relacionado
+                    con la naturaleza (habilidades de agua, fuego, escarcha, tierra, eléctrico, aire) además de ciertas
+                    habilidades que incluyen invocar y/o hablar con los animales. Mientras que los brujos dominan las
+                    artes oscuras como la necromancia y el vudú muchas veces dejándose llevar por ello y acabando muy
+                    mal. Ambos (mago/brujo) dominan las magias básicas (levitar cosas, etc.)
+                </p>
+
+
+            </div>
+
+
+            <h2 id="mixtas">Mixtas</h2>
+
+            <div class="titulo-avatar-relativo">
+                <img style="border-radius: 2rem;" class="avatar" src="img/clases/caballero.jfif" alt="">
+                <p> <span id="paladin" class="fw-bolder h3-simulator">Caballero/Paladin</span>
+                    <br>
+                    Guerreros con armaduras muy pesadas, por lo tanto, de constitución poderosa, armados con mandobles
+                    que son capaces de usar hechizos curativos y defensivos (ej. escudos mágicos).
+                </p>
+
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/clases/samurai.png" alt="">
+                <p> <span id="samurai" class="fw-bolder h3-simulator">Samurai</span>
+                    <br>
+                    Guerreros ágiles armados con una katana con armaduras ligeras. Especializados en arte de combate de
+                    alcance medio gracias a la manipulación del viento (ej. lanza una onda de aire que te corta).
+
+                    <br>
+                </p>
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img style="border-radius: 50%;" class="avatar" src="img/clases/ninja.jfif" alt="">
+                <p> <span id="ninja" class="fw-bolder h3-simulator">Ninja</span>
+                    <br>
+                    Guerreros ágiles, rápidos, silenciosos, no llevan armaduras y van con la cara tapada. <br> Usan
+                    cuchillos
+                    para lanzar (ej. shuriken, kunai). <br> Son capaces de esconderse en la sombra y usan kodachi y
+                    ninjato.
+                    <br> Se especializan en viajar tan rápido por las sombras que aparecen y desaparecen como en un blinkeo para el combate e intentan asesinar antes de empezar un combate<br> Controlan las sombras.
+                </p>
+
+
+            </div>
+
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="img/clases/ronin.png" alt="">
+                <p> <span id="ronin" class="fw-bolder h3-simulator">Ronin</span>
+                    <br>
+                    Son samuráis que se especializan en usar técnicas de espadas con rayos (ej. imbuir la espada en
+                    rayos). Usan 2 katanas. Los más poderosos pueden incluso convocar tormentas y hacer caer rayos.
+                    <br>
+                </p>
+
+            </div>
+
+            <h2 id="Spiritmancer">Spiritmancer</h2>
+
+            <div class="titulo-avatar-relativo">
+                <img style="border-radius: 50%;" class="avatar" src="img/clases/spiritmancer.jfif" alt="">
+                <p>
+                    <br>
+                    Son una clase especializada en la exterminación de espíritus o almas que han quedado atrapadas en el
+                    mundo de los vivos. Personas que consiguen llegar a la puerta que conecta el mundo de los vivos con
+                    el de los muertos, donde ofrecen su alma a la Muerte para poder usar magia espiritual, que es una
+                    magia especial basada en la energía mundial. La muerte solo aceptará con aquellos que tengan un alma
+                    grande y poderosa; y eso solo suele ser con ancianos o seres que han vivido muchos años. Podrían
+                    hacer cosas como teletransportarse a sí mismo y a otros, sin gastar cristales. También pueden
+                    comunicarse con los espíritus y verlos, pueden doblegar las almas débiles para esclavizarlas y usar
+                    la energía espiritual como fuente de poder y absorberla del teal (lo cual dejará el teal apagado
+                    perdiendo su color y dando así lugar a un nuevo material que se usará como canalizador o contenedor
+                    de otras energías. Dicho material solo se puede obtener vaciando teal.)
+                </p>
+
+
+            </div>
+
+            <img src="img/webBG.png" alt="" class="bg">
+            <div class="boton-para-subir"><a href="#up"><img src="img/arrow2.png" alt="" class="flecha"></a></div>
+            <div class="boton-para-home"><a href="home.html"><img src="img/webIcon.png" alt="" class="mainIcon"></a>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous">
+
+
+
+                </script>
+</body>
+
+</html>

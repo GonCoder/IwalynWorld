@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kekwlol</title>
+    <style>
+      body {
+        color: aqua;
+        background-color: rgb(66, 0, 0);
+      }
+    </style>
+  </head>
+
+  <body class="test">
+    <input type="text" id="kekw" />
+    <button onclick="meteP()">MONDONGO (este boton es seguro)</button>
+
+    <form action="login.html">
+
+
+
+
+
+
+        
+    </form>
+
+    <script>
+      let colorIndex = 0;
+      let sizeIndex = 0;
+      function meteP() {
+        const colores = ["green", "blue", "red", "purple", "orange", "pink"];
+        const size = ["1.5rem", "4rem", "5rem", "2rem", "6rem", "0.5rem"];
+        let pete = document.querySelector("input").value;
+        let lol = document.createElement("h1");
+        lol.textContent = pete;
+        lol.style.color = colores[colorIndex];
+        lol.style.fontSize = size[sizeIndex];
+        colorIndex = (colorIndex + 1) % colores.length;
+        sizeIndex = (sizeIndex + 1) % size.length;
+        document.body.append(lol);
+      }
+    </script>
+  </body>
+</html>
