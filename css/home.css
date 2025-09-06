@@ -20,7 +20,7 @@
 .overlay {
     background-color: rgba(127, 255, 212, 0.219);
     width: 80%;
-    height: 100%;
+    height: 100vmax;
     margin: 0 auto;
     border: 3px solid turquoise;
     /* margin-top: 2%; */

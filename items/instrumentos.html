@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrumentos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/archivo.css">
+    <link rel="icon" href="../icon.ico" type="image/x-icon">
+    <style>
+        @font-face {
+            font-family: "BlackCastleMF";
+            src: url(../fonts/BlackCastleMF.ttf);
+        }
+        @font-face {
+            font-family: "Stabillo Medium";
+            src: url(../fonts/Stabillo\ Medium.ttf);
+        }
+        @font-face {
+            font-family: "Death Record";
+            src: url(../fonts/Death\ Record.ttf);
+        }
+        @font-face {
+            font-family: "Dungeon";
+            src: url(../fonts/DUNGRG__.TTF);
+        }
+        @font-face {
+            font-family: "Scurlock";
+            src: url(../fonts/SC______.TTF);
+        }
+        body {
+            cursor: url('../cursores/BnW/Arrow.cur'), auto;
+        }
+        a {
+            cursor: url('../cursores/BnW/NO.cur'), pointer;
+        }
+        .dropdown-menu, .nav-link {
+            cursor: url('../cursores/BnW/UpArrow.cur'), pointer !important;
+        }
+        p, span {
+            cursor: url('../cursores/BnW/Pen.cur'), text;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-item dropdown fixed-top nav-custom">
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../img/menu-icon.png" alt="">
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="../home.html">Inicio</a></li>
+            <li><a class="dropdown-item" href="../items.html">Volver a Items</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#viento">Viento</a></li>
+            <li><a class="dropdown-item" href="#cuerda">Cuerda</a></li>
+            <li><a class="dropdown-item" href="#percusion">Percusion</a></li>
+        </ul>
+    </nav>
+
+    <div class="overlay">
+        <a href="../home.html">
+            <h1 id="up">Instrumentos</h1>
+        </a>
+        <a href="../home.html"><img class="mainIcon" src="../img/webIcon.png" alt=""></a>
+
+        <h2 id="viento">Instrumentos de Viento</h2>
+        <div class="FlexPadre">
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="../img/items/instrumentos/Glavien.webp" alt="Glavien">
+                <p>
+                    <span class="fw-bolder h3-simulator">Glavien</span><br>
+                    Instrumento de viento tradicional de Iwalyn. Su sonido es profundo y envolvente, utilizado en ceremonias y rituales mágicos.<br>
+                    <span class="fw-bolder h3-simulator">Características</span><br>
+                    Fabricado con madera de los bosques de Fenrines, decorado con runas.<br>
+                    <span class="fw-bolder h3-simulator">Uso</span><br>
+                    Popular entre los bardos y magos para invocar energías elementales.<br>
+                </p>
+                <p class="titulo-avatar-absoluto">Glavien<br><span class="fw-bolder h3-simulator">Viento</span></p>
+            </div>
+        </div>
+
+        <h2 id="cuerda">Instrumentos de Cuerda</h2>
+        <div class="FlexPadre">
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="../img/items/instrumentos/Brontar.webp" alt="Brontar">
+                <p>
+                    <span class="fw-bolder h3-simulator">Brontar</span><br>
+                    Instrumento de cuerda de gran tamaño, parecido a un arpa. Produce melodías potentes y resonantes.<br>
+                    <span class="fw-bolder h3-simulator">Características</span><br>
+                    Cuerdas de fibra mágica, cuerpo de madera reforzada.<br>
+                    <span class="fw-bolder h3-simulator">Uso</span><br>
+                    Utilizado en festivales y batallas para inspirar a los guerreros.<br>
+                </p>
+                <p class="titulo-avatar-absoluto">Brontar<br><span class="fw-bolder h3-simulator">Cuerda</span></p>
+            </div>
+        </div>
+
+        <h2 id="percusion">Instrumentos de Percusión</h2>
+        <div class="FlexPadre">
+            <div class="titulo-avatar-relativo">
+                <img class="avatar" src="../img/items/instrumentos/Draklor.webp" alt="Draklor">
+                <p>
+                    <span class="fw-bolder h3-simulator">Draklor</span><br>
+                    Instrumento de percusión robusto, similar a un tambor gigante. Su sonido es grave y retumbante.<br>
+                    <span class="fw-bolder h3-simulator">Características</span><br>
+                    Hecho con piel de bestias mágicas y madera de roble.<br>
+                    <span class="fw-bolder h3-simulator">Uso</span><br>
+                    Marca el ritmo en rituales de guerra y celebraciones.<br>
+                </p>
+                <p class="titulo-avatar-absoluto">Draklor<br><span class="fw-bolder h3-simulator">Percusión</span></p>
+            </div>
+        </div>
+
+        <img src="../img/webBG.png" alt="" class="bg">
+        <div class="boton-para-subir"><a href="#up"><img src="../img/arrow2.png" alt="" class="flecha"></a></div>
+        <div class="boton-para-home"><a href="../home.html"><img src="../img/webIcon.png" alt="" class="mainIcon"></a></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    </div>
