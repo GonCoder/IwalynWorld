@@ -1,3 +1,6 @@
+/* ===========================================
+   RESET Y CONFIGURACIÓN BASE
+   =========================================== */
 * {
     margin: 0;
     box-sizing: border-box;
@@ -9,6 +12,9 @@
     background-color: rgb(0, 240, 248);
 }
 
+/* ===========================================
+   LAYOUT PRINCIPAL
+   =========================================== */
 .bg {
     position: fixed;
     top: 0;
@@ -17,7 +23,6 @@
     height: 100%;
     z-index: -1;
     filter: brightness(0.4);
-
 }
 
 .overlay {
@@ -26,15 +31,15 @@
     height: 100%;
     margin: 0 auto;
     border: 3px solid turquoise;
-    /* margin-top: 2%; */
     text-align: center;
     overflow: visible;
     border-top: hidden;
     border-bottom: hidden;
-
-
 }
 
+/* ===========================================
+   ELEMENTOS COMUNES
+   =========================================== */
 .mainIcon {
     width: 120px;
 }
@@ -43,13 +48,17 @@ a {
     text-decoration: none;
 }
 
+/* ===========================================
+   TIPOGRAFÍA
+   =========================================== */
 h1 {
     font-family: "BlackCastleMF";
     color: turquoise;
     font-size: 5rem;
     letter-spacing: 5px;
     font-weight: 100;
-    text-shadow: 2px 2px 3px rgb(0, 84, 133),
+    text-shadow: 
+        2px 2px 3px rgb(0, 84, 133),
         -2px 2px 4px rgb(0, 84, 133),
         2px -2px 5px rgb(0, 84, 133),
         -2px -2px 6px rgb(0, 84, 133);
@@ -63,12 +72,16 @@ h2 {
     font-weight: 100;
     margin-bottom: 50px;
     margin-top: 10px;
-    text-shadow: 2px 2px 3px rgb(0, 51, 80),
+    text-shadow: 
+        2px 2px 3px rgb(0, 51, 80),
         -2px 2px 4px rgb(0, 47, 75),
         2px -2px 5px rgb(3, 51, 78),
         -2px -2px 6px rgb(0, 43, 68);
 }
 
+/* ===========================================
+   CONTENEDORES FLEX
+   =========================================== */
 .FlexPadre {
     display: flex;
     flex-wrap: wrap;
@@ -83,6 +96,9 @@ h2 {
     display: flex;
 }
 
+/* ===========================================
+   CONTENIDO
+   =========================================== */
 .avatar {
     width: 15%;
     height: 200px;
@@ -93,7 +109,8 @@ div p {
     color: aqua;
     font-size: 1.8rem;
     font-family: Stabillo Medium;
-    text-shadow: 2px 2px 3px black,
+    text-shadow: 
+        2px 2px 3px black,
         -2px 2px 4px black,
         2px -2px 5px black,
         -2px -2px 6px black;
@@ -101,6 +118,9 @@ div p {
     width: 85%;
 }
 
+/* ===========================================
+   NAVEGACIÓN
+   =========================================== */
 .nav-custom {
     width: min-content;
 }
@@ -121,16 +141,25 @@ div p {
     filter: hue-rotate(45deg);
 }
 
-.buscador {
-position: fixed !important; right: 2px !important; top: 0 !important;
+.dropdown-item {
+    color: turquoise !important;
+    font-size: 1.4rem !important;
+}
 
+/* ===========================================
+   UTILIDADES
+   =========================================== */
+.buscador {
+    position: fixed !important;
+    right: 2px !important;
+    top: 0 !important;
 }
 
 .h3-simulator {
     font-size: 3rem;
     font-family: Dungeon;
     letter-spacing: 3px;
-    color: rgb(0, 183, 255)
+    color: rgb(0, 183, 255);
 }
 
 .titulo-avatar-relativo {
@@ -146,11 +175,9 @@ position: fixed !important; right: 2px !important; top: 0 !important;
     color: rgb(0, 255, 191);
 }
 
-.dropdown-item {
-    color: turquoise !important;
-    font-size: 1.4rem !important;
-}
-
+/* ===========================================
+   BOTONES FLOTANTES
+   =========================================== */
 .flecha {
     width: 8rem;
     rotate: 90deg;
@@ -160,39 +187,37 @@ position: fixed !important; right: 2px !important; top: 0 !important;
     position: fixed;
     right: 0.1%;
     bottom: 3%;
-
 }
 
 .boton-para-home {
     position: fixed;
     right: 0.3%;
     bottom: 15%;
-
 }
 
-/* Estilo para toda la barra de desplazamiento */
+/* ===========================================
+   SCROLLBAR PERSONALIZADO
+   =========================================== */
 ::-webkit-scrollbar {
-    width: 12px; /* Ancho de la barra de desplazamiento */
-    height: 6px; /* Alto para scroll horizontal */
+    width: 12px;
+    height: 6px;
 }
 
-/* Estilo para la parte deslizante (thumb) */
 ::-webkit-scrollbar-thumb {
-    background-color:aqua; /* Color del thumb */
-    border-radius: 10px; /* Bordes redondeados */
-    border: 3px solid #009b9b; /* Borde alrededor del thumb */
+    background-color: aqua;
+    border-radius: 10px;
+    border: 3px solid #009b9b;
 }
 
-/* Estilo para la pista de la barra de desplazamiento */
 ::-webkit-scrollbar-track {
-    background-color: #0c0c0c; /* Color de la pista */
+    background-color: #0c0c0c;
 }
 
-/* Cambiar el color del thumb cuando se pasa el ratón por encima */
 ::-webkit-scrollbar-thumb:hover {
     background-color: rgb(0, 230, 199);
 }
 
-ul { overflow-y:scroll;
+ul {
+    overflow-y: scroll;
     max-height: 80vh;
 }

@@ -1,0 +1,51 @@
+/* ===========================================
+   FUENTES
+   =========================================== */
+@font-face {
+    font-family: "BlackCastleMF";
+    src: url(../fonts/BlackCastleMF.ttf);
+}
+
+@font-face {
+    font-family: "Stabillo Medium";
+    src: url(../fonts/Stabillo\ Medium.ttf);
+}
+
+@font-face {
+    font-family: "Death Record";
+    src: url(../fonts/Death\ Record.ttf);
+}
+
+@font-face {
+    font-family: "Dungeon";
+    src: url(../fonts/DUNGRG__.TTF);
+}
+
+@font-face {
+    font-family: "Scurlock";
+    src: url(../fonts/SC______.TTF);
+}
+
+/* ===========================================
+   CURSORES PERSONALIZADOS
+   =========================================== */
+body {
+    cursor: url('../cursores/BnW/Arrow.cur'), auto;
+}
+
+a {
+    cursor: url('../cursores/BnW/NO.cur'), pointer;
+}
+
+.dropdown-menu {
+    cursor: url('../cursores/BnW/UpArrow.cur'), pointer !important;
+}
+
+.nav-link {
+    cursor: url('../cursores/BnW/UpArrow.cur'), pointer !important;
+}
+
+p,
+span {
+    cursor: url('../cursores/BnW/Pen.cur'), text;
+}
