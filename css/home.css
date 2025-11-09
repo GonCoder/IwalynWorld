@@ -18,6 +18,7 @@
     height: 100%;
     z-index: -1;
     filter: brightness(0.4);
+    object-fit: cover;
 }
 
 .overlay {
@@ -30,6 +31,7 @@
     overflow: visible;
     border-top: hidden;
     border-bottom: hidden;
+    min-height: 100vh;
 }
 
 /* ===========================================
@@ -37,6 +39,24 @@
    =========================================== */
 .mainIcon {
     width: 120px;
+}
+
+.guts-img {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(-1);
+    width: 300px;
+    z-index: 10;
+}
+
+.guts-link {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 300px;
+    height: auto;
 }
 
 /* ===========================================
@@ -161,4 +181,144 @@ h1 {
 ul {
     overflow-y: scroll;
     max-height: 80vh;
+}
+
+/* ===========================================
+   RESPONSIVE - MOBILE
+   =========================================== */
+@media screen and (max-width: 768px) {
+    /* Layout principal */
+    .overlay {
+        width: 95%;
+        padding: 10px;
+    }
+
+    /* Tipografía móvil */
+    h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        margin: 10px 0;
+    }
+
+    /* Iconos principales */
+    .mainIcon {
+        width: 80px;
+    }
+
+    /* Recuadros de navegación - grid responsivo */
+    .FlexPadre {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .recuadro {
+        width: 45vw;
+        height: 18vh;
+        min-height: 120px;
+        padding: 5px;
+    }
+
+    .recuadro a {
+        font-size: 1.5rem;
+        padding-top: 20%;
+    }
+
+    /* Navegación móvil */
+    .nav-custom img {
+        width: 12vw;
+        min-width: 40px;
+        max-width: 60px;
+    }
+
+    .dropdown-item {
+        font-size: 1.1rem !important;
+        padding: 15px 20px !important;
+    }
+
+    .dropdown-menu {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
+    /* Botones flotantes más pequeños */
+    .flecha {
+        width: 4rem;
+    }
+
+    .boton-para-subir {
+        right: 2%;
+        bottom: 5%;
+    }
+
+    .boton-para-home {
+        right: 2%;
+        bottom: 18%;
+    }
+
+    /* Scrollbar más delgado en móvil */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    /* Ocultar Guts en móvil para no obstruir */
+    .guts-img,
+    .guts-link {
+        display: none !important;
+        visibility: hidden !important;
+    }
+}
+
+/* Pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .mainIcon {
+        width: 60px;
+    }
+
+    .recuadro {
+        width: 42vw;
+        height: 16vh;
+        min-height: 100px;
+    }
+
+    .recuadro a {
+        font-size: 1.2rem;
+        padding-top: 25%;
+    }
+
+    .flecha {
+        width: 3.5rem;
+    }
+
+    .guts-img {
+        width: 120px;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .overlay {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .recuadro {
+        width: 28vw;
+        height: 18vh;
+    }
+
+    .recuadro a {
+        font-size: 2rem;
+    }
+
+    .guts-img {
+        width: 200px;
+    }
 }
